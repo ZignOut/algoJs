@@ -20,19 +20,91 @@
 
     <!-- Introduction to AlgoJs Project -->
     <v-container>
-      <v-row>
-        <h2 class="title pt-10">Why?</h2>
+        <h2 class="title mt-10">Why?</h2>
         <p
-          class="content pt-4"
-        >စိတ်ပါဝင်စားပီး တကယ်လေ့လာနေတဲ့သူတွေ ဝင်ရောက်ကြည့်ရှူနိုင်စေရန်ရည်ရွယ်ထားပါတယ်။ လောလောဆယ်တော့ လေ့လာဆဲမို့ အများကြီးမတင်နိုင်ပါဘူး။ အမှားများနိုင်ပါတယ်။ သိတဲ့သူများဝေဖန်ထောက်ပြပေးနိုင်ပါတယ်။ နောက်ပိုင်း discussion feature လေးထည့်နိုင်အောင်ကြိုးစားပါဦးမယ်။ စိတ်ပါဝင်စားသူများ အကြံဉာဏ်များပေးနိုင်ပါတယ်။</p>
-      </v-row>
+          class="content mt-4"
+        >စိတ်ပါဝင်စားပီး တကယ်လေ့လာနေတဲ့ သူတွေ ဝင်ရောက်ကြည့်ရှူနိုင် စေရန်ရည်ရွယ်ထား ပါတယ်။ လောလောဆယ်တော့ လေ့လာဆဲမို့ အများကြီး မတင်နိုင်ပါဘူး။ အမှားများနိုင် ပါတယ်။ သိတဲ့သူများ ဝေဖန်ထောက်ပြ ပေးနိုင်ပါတယ်။ နောက်ပိုင်း discussion feature လေးထည့်နိုင် အောင်ကြိုးစားပါ ဦးမယ်။ စိတ်ပါဝင်စားသူများ အကြံဉာဏ်များ ပေးနိုင်ပါတယ်။</p>
+
+        <h2 class="title mt-10 d-block">Featuring</h2>
+
+        <v-card :href="feature.link" v-for="feature in features" :key="feature" width="300px" color="white darken-4 teal--text" class=" d-inline-block pt-4 mt-6 mr-md-12">
+          <v-card-title>{{ feature.title }}</v-card-title>
+          <v-card-subtitle>Author. {{ feature.author }}</v-card-subtitle>
+          <div class="pt-4">
+            <v-btn class="pl-6" icon>
+              <v-icon>star</v-icon>
+              <span>{{ feature.like }}</span>
+            </v-btn>
+
+            <v-btn class="pl-10" icon>
+              <v-icon>comment</v-icon>
+              <span>{{ feature.comment }}</span>
+            </v-btn>
+          </div>
+        </v-card>
     </v-container>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Home"
+  name: "Home",
+
+  data() {
+    return {
+      features: [
+        {
+          title: 'Merge Sort',
+          author: 'kaunghtut',
+          like: 5,
+          comment: 6,
+          link: '/mergesort'
+        },
+        {
+          title: 'Selection Sort',
+          author: 'kaunghtut',
+          like: 2,
+          comment: 9,
+          link: '/selectionsort'
+        },
+        {
+          title: 'Selection Sort',
+          author: 'kaunghtut',
+          like: 2,
+          comment: 9,
+          link: '/selectionsort'
+        },
+        {
+          title: 'Selection Sort',
+          author: 'kaunghtut',
+          like: 2,
+          comment: 9,
+          link: '/selectionsort'
+        },
+        {
+          title: 'Selection Sort',
+          author: 'kaunghtut',
+          like: 2,
+          comment: 9,
+          link: '/selectionsort'
+        },
+        {
+          title: 'Selection Sort',
+          author: 'kaunghtut',
+          like: 2,
+          comment: 9,
+          link: '/selectionsort'
+        },
+        {
+          title: 'Selection Sort',
+          author: 'kaunghtut',
+          like: 2,
+          comment: 9,
+          link: '/selectionsort'
+        },
+      ]
+    }
+  }
 };
 </script>
 
